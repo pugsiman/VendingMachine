@@ -74,9 +74,9 @@ class VendingMachine
   end
 
   def collect_change_by_amount(amount)
+    collected_coins = []
     return collected_coins if amount.zero?
 
-    collected_coins = []
     remaining_amount = amount
     @coins.each do |coin|
       coin_value = coin.value
